@@ -57,7 +57,7 @@ const AuthPage = props => {
             };
         };
 
-        fetch('http://localhost:8000/graphql', {
+        fetch(`http://localhost:${process.env.PORT}/graphql`, {
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {

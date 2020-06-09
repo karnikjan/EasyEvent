@@ -34,7 +34,7 @@ const Bookings = () => {
         };
 
 
-        fetch('http://localhost:8000/graphql', {
+        fetch(`http://localhost:${process.env.PORT}/graphql`, {
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
@@ -76,7 +76,7 @@ const Bookings = () => {
         };
 
 
-        fetch('http://localhost:8000/graphql', {
+        fetch(`http://localhost:${process.env.PORT}/graphql`, {
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
