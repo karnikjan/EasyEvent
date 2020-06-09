@@ -34,7 +34,7 @@ const Bookings = () => {
         };
 
 
-        fetch(`http://localhost:${process.env.PORT}/graphql`, {
+        fetch("https://easy-event-app1.herokuapp.com/graphql", {
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
@@ -76,7 +76,7 @@ const Bookings = () => {
         };
 
 
-        fetch(`http://localhost:${process.env.PORT}/graphql`, {
+        fetch("https://easy-event-app1.herokuapp.com/graphql", {
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
