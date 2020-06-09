@@ -20,6 +20,9 @@ app.use((req, res, next) => {
     }
     next();
 });
+app.get('/', (req, res) => {
+    res.send("HI"); 
+})
 
 app.use(isAuth);
 
@@ -32,12 +35,9 @@ app.use('/graphql', graphqlHttp({
 );
 
 
-mongoose.connect(`mongodb+srv://${
-    process.env.MONGO_USER}:${
-    process.env.MONGO_PASSWORD
-    }@rozvozproject-rsdzi.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
+mongoose.connect(`mongodb+srv://admin:admin@rozvozproject-rsdzi.mongodb.net/events-react-dev?retryWrites=true&w=majority`
 ).then(() => {
-    app.listen(process.env.PORT);
+    app.listen(process.env.PORT || 8080);
 }).catch(err => {
     console.log(err);
 });
